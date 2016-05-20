@@ -9,12 +9,20 @@ public class ArrayList {
 	}
 	
 	public void put(String clave, String valor){
-		if(inicio == null){
-			inicio = new Nodo(clave,valor,null);
-			fin = inicio;
+		if(this.containsKey(clave)){
+			Nodo aux = inicio;
+			while((aux!=null)&&(aux.getClave()!=clave)){
+				aux = aux.getSiguiente();
+			}
+			aux.setValor(valor);
 		} else{
-			fin.setSiguiente(new Nodo(clave,valor,null));
-			fin = fin.getSiguiente();
+			if(inicio == null){
+				inicio = new Nodo(clave,valor,null);
+				fin = inicio;
+			} else{
+				fin.setSiguiente(new Nodo(clave,valor,null));
+				fin = fin.getSiguiente();
+			}
 		}
 	}
 	
