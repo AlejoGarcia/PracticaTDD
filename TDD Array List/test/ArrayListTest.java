@@ -56,4 +56,15 @@ public class ArrayListTest {
 		assertEquals(true,al.containsKey("tercero"));
 	}
 	
+	@Test
+	public void ImplementancionDeLaOperacionRemove(){
+		al.put("primero", "uno");
+		al.put("segundo", "dos");
+		al.put("tercero", "tres");
+		assertEquals(3,al.size());
+		al.put("cuarto", "cuatro");
+		al.put("quinto", "cinco");
+		al.put("sexto", "seis");
+		assertEquals(6,al.size());
+	}
 }
