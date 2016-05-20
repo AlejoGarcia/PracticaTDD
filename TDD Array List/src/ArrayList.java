@@ -26,4 +26,5 @@ public class ArrayList {
 		if(aux == null) throw new ClaveNoEncontradaException();
 		return aux.getValor();
 	}
+
 }

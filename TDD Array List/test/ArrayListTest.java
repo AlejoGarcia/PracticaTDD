@@ -33,8 +33,8 @@ public class ArrayListTest {
 	@Test
 	public void ImplementacionDeLaOperacionGetOrElse(){
 		al.put("primero","uno");
-		assertEquals("uno",al.getOrElse("primero"));
-		assertEquals("valorPorDefecto",al.getOrElse("segundo"));
+		assertEquals("uno",al.getOrElse("primero","defalut"));
+		assertEquals("default",al.getOrElse("segundo","default"));
 	}
 	
 	
