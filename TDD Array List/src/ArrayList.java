@@ -27,4 +27,14 @@ public class ArrayList {
 		return aux.getValor();
 	}
 
+	public String getOrElse(String clave, String valorPorDefecto) {
+		String r = valorPorDefecto;
+		Nodo aux = inicio;
+		while((aux != null)&&(aux.getClave()!=clave)){
+			aux = aux.getSiguiente();
+		}
+		if(aux != null) r = aux.getValor();
+		return r;
+	}
+	
 }
