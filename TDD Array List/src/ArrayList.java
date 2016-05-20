@@ -36,5 +36,15 @@ public class ArrayList {
 		if(aux != null) r = aux.getValor();
 		return r;
 	}
+
+	public boolean containsKey(String clave) {
+		boolean r = false;
+		Nodo aux = inicio;
+		while((aux != null)&&(!r)){
+			if(aux.getClave()==clave) r = true;
+			aux = aux.getSiguiente();
+		}
+		return r;
+	}
 	
 }
