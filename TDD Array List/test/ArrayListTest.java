@@ -37,5 +37,11 @@ public class ArrayListTest {
 		assertEquals("default",al.getOrElse("segundo","default"));
 	}
 	
+	@Test
+	public void ImplementacionDeLaOperacionContainsKey(){
+		al.put("primero","uno");
+		assertEquals(true,al.containsKey("primero"));
+		assertEquals(false,al.containsKey("segundo"));
+	}
 	
 }
