@@ -46,5 +46,23 @@ public class ArrayList {
 		}
 		return r;
 	}
+
+	public boolean remove(String clave) {
+		boolean r = false;
+		Nodo aux = inicio,aux2 = inicio;
+		while((aux != null)&&(aux.getClave()!=clave)){
+			aux2 = aux;
+			aux = aux.getSiguiente();
+		}
+		if(aux != null){
+			if(aux == inicio){
+				inicio = aux.getSiguiente();
+			} else{
+				aux2.setSiguiente(aux.getSiguiente());
+			}
+			r = true;
+		}
+		return r;
+	}
 	
 }
