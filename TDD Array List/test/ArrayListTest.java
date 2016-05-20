@@ -24,9 +24,9 @@ public class ArrayListTest {
 	@Rule
 	public ExpectedException except = ExpectedException.none();
 	@Test
-	public void LaFuncionGetElevaUnaExcepcion(){
+	public void LaFuncionGetElevaUnaException(){
 		except.expect(ClaveNoEncontradaException.class);
 		except.expectMessage("Clave no encontrada");
-		assertEquals("uno",al.get("primero"));
+		assertEquals("uo",al.get("primero"));
 	}
 }

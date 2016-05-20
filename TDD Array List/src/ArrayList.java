@@ -20,9 +20,10 @@ public class ArrayList {
 	
 	public String get(String clave){
 		Nodo aux = inicio;
-		while((aux.getClave()!=clave)&&(aux != null)){
+		while((aux != null)&&(aux.getClave()!=clave)){
 			aux = aux.getSiguiente();
 		}
+		if(aux == null) throw new ClaveNoEncontradaException();
 		return aux.getValor();
 	}
 }
