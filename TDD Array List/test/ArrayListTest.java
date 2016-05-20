@@ -28,7 +28,7 @@ public class ArrayListTest {
 	public void LaFuncionGetElevaUnaException(){
 		except.expect(ClaveNoEncontradaException.class);
 		except.expectMessage("Clave no encontrada");
-		assertEquals("uo",al.get("primero"));
+		al.get("a");
 	}
 	
 	@Test
@@ -84,5 +84,19 @@ public class ArrayListTest {
 		assertEquals("uno",al.get("primero"));
 		al.put("primero","1");
 		assertEquals("1",al.get("primero"));
+		al.put("segundo","dos");
+		assertEquals("dos",al.get("segundo"));
+		al.put("segundo","2");
+		assertEquals("2",al.get("segundo"));
+	}
+	
+	@Test
+	public void IntentoDeGetSobreElementoExistente() throws Exception {
+		al.put("primero", "uno");
+		al.put("segundo", "dos");
+		al.put("tercero", "tres");
+		assertEquals("uno",al.get("primero"));
+		assertEquals("dos",al.get("segundo"));
+		assertEquals("tres",al.get("tercero"));
 	}
 }
