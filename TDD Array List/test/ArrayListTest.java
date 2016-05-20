@@ -21,6 +21,7 @@ public class ArrayListTest {
 		assertEquals("uno",al.get("primero"));
 	}
 	
+	
 	@Rule
 	public ExpectedException except = ExpectedException.none();
 	@Test
@@ -66,5 +67,22 @@ public class ArrayListTest {
 		al.put("quinto", "cinco");
 		al.put("sexto", "seis");
 		assertEquals(6,al.size());
+	}
+	
+	@Test
+	public void EliminarUltimoElementoDeLaLista(){
+		al.put("primero", "uno");
+		al.put("segundo", "dos");
+		al.put("tercero", "tres");
+		assertEquals(true,al.remove("tercero"));
+		assertEquals(false,al.containsKey("tercero"));
+	}
+	
+	@Test
+	public void CambiarValorExistente(){
+		al.put("primero","uno");
+		assertEquals("uno",al.get("primero"));
+		al.put("primero","1");
+		assertEquals("1",al.get("primero"));
 	}
 }
