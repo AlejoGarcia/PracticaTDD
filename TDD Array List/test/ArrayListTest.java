@@ -29,4 +29,13 @@ public class ArrayListTest {
 		except.expectMessage("Clave no encontrada");
 		assertEquals("uo",al.get("primero"));
 	}
+	
+	@Test
+	public void ImplementacionDeLaOperacionGetOrElse(){
+		al.put("primero","uno");
+		assertEquals("uno",al.getOrElse("primero"));
+		assertEquals("valorPorDefecto",al.getOrElse("segundo"));
+	}
+	
+	
 }
