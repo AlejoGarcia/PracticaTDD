@@ -65,5 +65,15 @@ public class ArrayList {
 		return r;
 	}
 
+	public int size() {
+		int r = 0;
+		Nodo aux = inicio;
+		while(aux != null){
+			r++;
+			aux = aux.getSiguiente();
+		}
+		return r;
+	}
+	
 	
 }
